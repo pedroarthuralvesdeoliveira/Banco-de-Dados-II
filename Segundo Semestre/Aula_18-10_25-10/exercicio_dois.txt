@@ -1,0 +1,50 @@
+2) Criar o MER do seguinte Der abaixo:
+							a)							
+	Inquilino atende a um corretor	
+	Inquilino aluga um imóvel
+	Um corretor pode atender a um ou mais inquilinos
+	Corretor contacta um ou mais proprietários
+	Um proprietário pode ter um ou mais corretores
+	Um proprietário pode ter um ou mais imóveis
+	Um aluguel é um relacionamento ternário entre o relacionamento de Inquilino e imóvel
+	
+	Atributos:
+		Inquilino: codigo, nome;
+		Corretor: codigo, nome;
+		Proprietário: codigo, nome;
+		Imóvel: codigo, descricao, valorAluguel, situacao;
+		Aluguel: codigo, data, dataVencimento, valorAluguel
+
+b) 
+	Bandeira fornece a nenhum ou mais postos
+	Posto é fornecido por nenhuma ou uma bandeira
+	Posto é localizado em nenhum ou um bairro 
+	Um bairro pode ter nenhum ou vários postos
+	Um bairro está localizado em uma única cidade
+	Uma cidade pode ter nenhum ou vários bairros
+	Nenhum ou vários postos podem ser comentados por nenhuma ou várias pessoas
+	Uma pessoa mora em um único bairro
+	Um bairro pode ter nenhuma ou várias pessoas
+	Uma pessoa pode ser proprietária de nenhum ou mais do que um veículo
+	Nenhum ou vários veículos podem ser de posse de uma única pessoa
+	Nenhuma ou uma pessoa autentica-se como usuário	
+	Caso houver, pode-se ter nenhum ou vários usuários cadastrados
+	Nenhum ou vários usuários podem ser de nenhum ou um único tipo de usuário
+	Nenhum ou vários postos tem o fornecimento de nenhum ou vários (tipos de) combustível(is)
+	Os fornecimentos de combustível pelos postos caracterizam-se como uma venda, a venda pode ser - a depender da cotação e tipo da gasolina - como nenhum ou vários preços
+	Nenhum ou vários veículos são abastecidos com nenhum ou mais do que um combustível
+
+	Atributos:
+		Bandeira: nome e url
+		Posto:razao_social, nome_fantasia, latitude, longitude, endereço, telefone
+		Combustível: nome
+		Preço: valor e momento
+		Bairro: nome
+		Cidade: nome, estado, latitude e longitude
+		Pessoa: endereço, nome e login
+		Usuario: login e senha
+		Veiculo:placa, marca e modelo
+		Tipo_usuario:nome
+	
+	
+			
