@@ -1,0 +1,29 @@
+/* mer-der_normalizacao_modelo-fisico_logico: */
+
+CREATE TABLE Pessoa (
+    rg VARCHAR,
+    cpf VARCHAR,
+    data_nascimento DATE,
+    pai VARCHAR,
+    mae VARCHAR
+);
+
+CREATE TABLE CNH (
+    categoria CHAR,
+    acc VARCHAR,
+    permissao VARCHAR,
+    numero_registro VARCHAR PRIMARY KEY,
+    validade DATE,
+    primeira_habilitacao DATE,
+    FK_Observacao_Observacao_PK VARCHAR
+);
+
+CREATE TABLE Observacao (
+    Observacao_PK VARCHAR NOT NULL PRIMARY KEY,
+    Observacao VARCHAR
+);
+ 
+ALTER TABLE CNH ADD CONSTRAINT FK_CNH_2
+    FOREIGN KEY (FK_Observacao_Observacao_PK)
+    REFERENCES Observacao (Observacao_PK)
+    ON DELETE NO ACTION;
