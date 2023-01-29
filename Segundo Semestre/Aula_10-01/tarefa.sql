@@ -220,3 +220,22 @@ INNER JOIN
     Pacientes
 		ON Medicos.cpf = Pacientes.cpf;
         
+SELECT 
+    Medicos.nome AS MedicoNome, Medicos.cpf AS MedicoCPF,
+    Funcionarios.nome AS FuncionariosNome, Funcionarios.cpf AS FuncionariosCPF
+FROM
+    Medicos 
+INNER JOIN
+    Funcionarios
+		ON Medicos.cidade = Funcionarios.cidade
+ORDER BY 
+	Medicos.cidade;
+        
+SELECT DISTINCT
+    Pacientes.codp, nome
+FROM
+    Pacientes
+        INNER JOIN
+    Consultas ON Pacientes.codp = Consultas.codp
+WHERE
+    hora > '14';
